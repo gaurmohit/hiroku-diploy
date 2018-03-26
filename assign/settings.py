@@ -25,7 +25,7 @@ SECRET_KEY = 'topexr&=_u==%urrs=&kuqvs%fgwh@5go^&&3=x-bbsd2ek=^r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
