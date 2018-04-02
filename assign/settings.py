@@ -25,7 +25,10 @@ SECRET_KEY = 'topexr&=_u==%urrs=&kuqvs%fgwh@5go^&&3=x-bbsd2ek=^r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
+
+LOGIN_REDIRECT_URL= '/'
+
 
 
 # Application definition
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'assign.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,6 +107,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.yahoo.com' # mail service smtp
+EMAIL_HOST_USER = 'testing.mypro@yahoo.com' # email id
+DEFAULT_FROM_EMAIL = 'testing.mypro@yahoo.com'
+EMAIL_HOST_PASSWORD = 'hmritm_sucks!' #password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 LANGUAGE_CODE = 'en-us'
 

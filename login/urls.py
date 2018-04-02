@@ -1,7 +1,8 @@
 from django.conf.urls import url
 from django.contrib import admin
-from . import views
+from .views import home,register,logins
 
 urlpatterns = [
-    url(r'^$',views.home,name="home"),
+    url(r'^$', home, name="home"),
+    url(r'^register/', register, name="register"),
 ]
